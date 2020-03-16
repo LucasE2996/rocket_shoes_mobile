@@ -3,7 +3,16 @@ import {Text} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import NumberFormat from 'react-number-format';
 
-import {Container, Image, Name, Price, Button, ButtonText} from './styles';
+import {
+  Container,
+  Image,
+  Name,
+  Price,
+  Button,
+  ButtonText,
+  ButtonLeft,
+  ProductsNumber,
+} from './styles';
 
 const Card = ({data}) => {
   const {title, price, image} = data;
@@ -21,7 +30,10 @@ const Card = ({data}) => {
         renderText={formattedText => <Price>{formattedText}</Price>}
       />
       <Button>
-        <Icon name="shopping-cart" size={20} color="#FFF" />
+        <ButtonLeft>
+          <Icon name="shopping-cart" size={18} color="#FFF" />
+          <ProductsNumber>1</ProductsNumber>
+        </ButtonLeft>
         <ButtonText>Adicionar ao carrinho</ButtonText>
       </Button>
     </Container>

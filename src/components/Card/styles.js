@@ -3,8 +3,8 @@ import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 
 export const Container = styled.View`
-  width: 230px;
-  height: 300px;
+  width: 240px;
+  height: 350px;
   background-color: #fff;
   margin-right: 20px;
   border-radius: 4px;
@@ -36,6 +36,31 @@ export const Button = styled.TouchableOpacity`
   padding: 3px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background: ${colors.green};
+  border-radius: 4px;
+  padding-right: 10px;
+  overflow: hidden;
+  height: 40px;
 `;
 
-export const ButtonText = styled.Text``;
+export const ButtonText = styled.Text`
+  color: #fff;
+`;
+
+export const ButtonLeft = styled.View`
+  flex-direction: row;
+  background: ${colors.greenDark};
+  width: 50px;
+  height: 41px;
+  margin-left: -3px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ProductsNumber = styled.Text`
+  margin-left: 2px;
+  color: #fff;
+  font-size: 16px;
+`;
