@@ -20,7 +20,9 @@ export const Image = styled.Image`
   background: #333;
 `;
 
-export const Name = styled.Text`
+export const Name = styled.Text.attrs({
+  numberOfLines: 2,
+})`
   font-size: 15px;
   color: ${colors.black};
   text-align: center;

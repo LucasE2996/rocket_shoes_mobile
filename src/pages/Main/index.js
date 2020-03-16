@@ -1,33 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
+import api from '../../services/api';
 import Card from '../../components/Card';
 import {Container} from '../../styles/globalStyles';
+
 import {FlatList} from './styles';
 
 const Main = () => {
-  const products = [
-    {
-      id: 1,
-      title: 'Tênis de Caminhada Leve Confortável',
-      price: 179.9,
-      image:
-        'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg',
-    },
-    {
-      id: 2,
-      title: 'Tênis VR Caminhada Confortável Detalhes Couro Masculino',
-      price: 139.9,
-      image:
-        'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg',
-    },
-    {
-      id: 3,
-      title: 'Tênis Adidas Duramo Lite 2.0',
-      price: 219.9,
-      image:
-        'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg',
-    },
-  ];
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    return api
+      .get('products')
+      .then(response => {
+        console.log('a');
+        return response.data;
+      })
+      .catch(error => console.error('Error', error));
+  };
+
+  useEffect(() => {
+    getProducts().then(response => {
+      console.log(response);
+      setProducts(response);
+    });
+  }, []);
 
   return (
     <Container>
