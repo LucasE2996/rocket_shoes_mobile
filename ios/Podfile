@@ -34,20 +34,12 @@ target 'rocket_shoes_mobile' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'rocket_shoes_mobileTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
   use_native_modules!
-end
-
-target 'rocket_shoes_mobile-tvOS' do
-  # Pods for rocket_shoes_mobile-tvOS
-
-  target 'rocket_shoes_mobile-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
