@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import React from 'react';
+import {Platform} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -22,9 +23,9 @@ const Stack = createStackNavigator();
 const DefaultOptions = ({navigation, route}) => ({
   title: null,
   headerStyle: {
-    height: 70,
+    height: Platform.OS === 'ios' ? 120 : 70,
     backgroundColor: colors.black,
-    elevation: 0,
+    shadowColor: 'transparent',
   },
   headerRight: () => (
     <HeaderButton onPress={() => navigation.navigate('Cart')}>
@@ -36,7 +37,7 @@ const DefaultOptions = ({navigation, route}) => ({
   ),
   headerLeft: () => (
     <HeaderLogo onPress={() => navigation.navigate('Main')}>
-      <Image source={logo} />
+      <Image source={logo} resizeMode="contain" />
     </HeaderLogo>
   ),
 });

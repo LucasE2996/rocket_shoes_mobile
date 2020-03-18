@@ -8,14 +8,14 @@ export const HeaderButton = styled.TouchableOpacity`
 `;
 
 export const HeaderLogo = styled.TouchableOpacity`
+  margin-left: 20px;
   justify-content: center;
   align-items: center;
+  width: 230px;
 `;
 
 export const Image = styled.Image`
-  margin-left: 20px;
-  height: 61%;
-  width: 200px;
+  width: 100%;
 `;
 
 export const CartLabel = styled.View`
