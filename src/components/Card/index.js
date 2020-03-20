@@ -14,7 +14,7 @@ import {
   ProductsNumber,
 } from './styles';
 
-const Card = ({data}) => {
+const Card = ({data, callback}) => {
   const {title, price, image} = data;
 
   return (
@@ -29,7 +29,7 @@ const Card = ({data}) => {
         decimalSeparator=","
         renderText={formattedText => <Price>{formattedText}</Price>}
       />
-      <Button>
+      <Button onPress={callback}>
         <ButtonLeft>
           <Icon name="shopping-cart" size={18} color="#FFF" />
           <ProductsNumber>1</ProductsNumber>

@@ -3,18 +3,12 @@ import React from 'react';
 import {Platform} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Main from './pages/Main';
 import Cart from './pages/Cart';
+import HeaderIcon from './components/HeaderIcon';
 
-import {
-  HeaderButton,
-  HeaderLogo,
-  Image,
-  CartLabel,
-  CartLabelText,
-} from './styles/header';
+import {HeaderLogo, Image} from './styles/header';
 import colors from './styles/colors';
 import logo from './assets/logo.png';
 
@@ -28,12 +22,7 @@ const DefaultOptions = ({navigation, route}) => ({
     shadowColor: 'transparent',
   },
   headerRight: () => (
-    <HeaderButton onPress={() => navigation.navigate('Cart')}>
-      <Icon name="shopping-basket" size={30} color="#FFF" />
-      <CartLabel>
-        <CartLabelText>10</CartLabelText>
-      </CartLabel>
-    </HeaderButton>
+    <HeaderIcon navigate={() => navigation.navigate('Cart')} />
   ),
   headerLeft: () => (
     <HeaderLogo onPress={() => navigation.navigate('Main')}>
