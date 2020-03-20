@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Rocket Shoes 👋</h1>
+<h1 align="center">Welcome to Rocket Shoes - mobile 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.o.o-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -20,14 +20,19 @@ yarn install
 ## Usage
 
 ```sh
-yarn start
+# android platform (virtual or phisical device)
+react-native run-android
+
+# ios platform (virtual device)
+react-native run-ios
 ```
+
+*To know more about how to setup your environment to get up and running with this app see: https://docs.rocketseat.dev/ambiente-react-native/introducao*
 
 ## Author
 
 👤 **Lucas Rosa**
 
-* Website: 	
 * Twitter: [@lucashtwt](https://twitter.com/lucashtwt)
 * Github: [@LucasE2996](https://github.com/LucasE2996)
 * LinkedIn: [@lucas-r-a4020796](https://linkedin.com/in/lucas-r-a4020796)
@@ -36,5 +41,4 @@ yarn start
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+Made with ❤️ by [@LucasE2996](https://github.com/LucasE2996)
